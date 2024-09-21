@@ -1,3 +1,7 @@
+
+//estos son para buscar en directo podecirlo asi, usmos las clases para poder ubicar bien
+//el contenido, e las primeras  y la utlima muestra la palbra que buscamos y la imagen que le sigue
+//la segunda solo logre adaptarlo para el aside
 document.addEventListener("keyup", e => {
     if (e.target.matches("#search")) {
         const searchTerm = e.target.value.toLowerCase();
@@ -22,6 +26,7 @@ document.addEventListener("keyup", e => {
         document.querySelectorAll(".consejo").forEach((consejo, index) => {
             const shouldShow = consejo.textContent.toLowerCase().includes(searchTerm);
             consejo.classList.toggle("filtro", !shouldShow);
+            
         });
     }
 });
@@ -43,7 +48,7 @@ document.addEventListener("keyup", e => {
 });
 
 
-
+// con esta funcion estamos llamdo la secion del iner para pdoer ir pasando las imagenes y hacemos que en automatico pasae el porcentaje que viene siendo el numeo de la imagen por asi decirlo
 document.addEventListener('DOMContentLoaded', function() {
     const sliders = document.querySelectorAll(".slider-container");
 
